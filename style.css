@@ -1,0 +1,37 @@
+/* 기본 레이아웃과 타이포그래피 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;      /* 스크롤 숨김 */
+  background: linear-gradient(#e0f7ff 0%, #f9fdff 100%);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 인사말 텍스트 */
+.greeting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #0077c8;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  z-index: 10;
+}
+
+/* 캔버스는 전체 화면을 덮음 */
+#rainCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* 마우스 이벤트는 JS로만 처리 */
+}
